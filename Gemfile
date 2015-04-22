@@ -49,7 +49,8 @@ group :test, :development do
   gem 'simplecov'
   gem 'database_cleaner'
   gem 'sqlite3'
-  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-nav'
   gem 'guard-rspec', require: false
   gem 'thin'
 end
