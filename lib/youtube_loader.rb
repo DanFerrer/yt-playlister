@@ -3,7 +3,7 @@ require 'httparty'
 require 'trollop'
 
 class YoutubeLoader
-  def initialize(api_key = nil, service_name = 'youtube', api_version = 'v3' )
+  def initialize(api_key = "nil", service_name = 'youtube', api_version = 'v3' )
     @api_key = api_key || ENV['YOUTUBE_API_KEY']
     @service_name = service_name
     @api_version = api_version
@@ -15,7 +15,7 @@ class YoutubeLoader
     Trollop::options do
       opt :q, 'Search term', type: String, default: 'Google'
       opt :maxResults, 'Max results', type: :int, default: 25
-      opt :part, 'Param', type: String, default: 'snippet'
+      opt :part, 'Param', type: String, default: 'id,snippet'
     end
   end
 end
